@@ -1,13 +1,14 @@
 <template>
-	<div class="post">
+	<li class="post">
 		<div>
+			<div><strong>Номер</strong> {{ post.id }}</div>
 			<div><strong>Назва</strong> {{ post.title }}</div>
 			<div><strong>Опис</strong> {{ post.body }}</div>
 		</div>
 		<div class="post__btns">
 			<MyButton type="button" @click="deletePost">Видалити</MyButton>
 		</div>
-	</div>
+	</li>
 </template>
 
 <script>

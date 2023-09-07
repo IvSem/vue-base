@@ -22,4 +22,16 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.input {
+	padding: 10px;
+	background-color: teal;
+	color: wheat;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+.input::placeholder {
+	color: wheat;
+}
+</style>
