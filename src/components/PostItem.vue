@@ -6,6 +6,7 @@
 			<div><strong>Опис</strong> {{ post.body }}</div>
 		</div>
 		<div class="post__btns">
+			<MyButton type="button" @click="$router.push(`/posts/${post.id}`)">Детальніше</MyButton>
 			<MyButton type="button" @click="deletePost">Видалити</MyButton>
 		</div>
 	</li>
@@ -26,7 +27,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .post {
 	padding: 10px;
 	border: 2px solid blue;
@@ -37,6 +38,13 @@ export default {
 
 	&:not(:last-child) {
 		margin-bottom: 10px;
+	}
+
+	// .post__btns
+	&__btns {
+		display: flex;
+		align-items: center;
+		column-gap: 12px;
 	}
 }
 </style>

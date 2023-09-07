@@ -14,21 +14,11 @@
 </template>
 
 <script>
+import toogleMixin from '@/mixins/toogleMixin';
 export default {
 	name: 'MyDialog',
 
-	props: {
-		show: {
-			type: Boolean,
-			default: false,
-		},
-	},
-	emits: ['update:show'],
-	methods: {
-		closeDialog() {
-			this.$emit('update:show', false);
-		},
-	},
+	mixins: [toogleMixin],
 };
 </script>
 
